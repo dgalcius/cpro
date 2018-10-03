@@ -1,0 +1,51 @@
+#+TITLE: pun program
+#+AUTHOR: KING
+
+* Compiler version
+#+BEGIN_SRC sh :results verbatim
+  gcc --version
+#+END_SRC
+
+
+#+begin_src ruby
+  require 'date'
+  puts "This file was last evaluated on #{Date.today}"
+#+end_src
+
+#+RESULTS:
+: nil
+
+#+BEGIN_SRC ruby :results output
+ puts Dir.entries('.')
+#+END_SR
+
+#+BEGIN_SRC emacs-lisp
+  (directory-files ".")
+#+END_SRC
+
+#+RESULTS:
+
+
+First we declare directive.
+#+BEGIN_SRC C :result verbatim :tangle pun2.c
+#include <stdio.h>
+#+END_SRC
+
+#+RESULTS:
+
+Where is it located?
+#+BEGIN_SRC shell
+  locate stdio.h
+#+END_SRC
+
+main function call
+#+BEGIN_SRC C :results verbatim :tangle pun2.c
+  int main(void)
+  {
+    printf("To C, or not to C: that is the question\n");
+    return 0;
+  }
+#+END_SRC
+
+#+RESULTS:
+: To C, or not to C: that is the question
