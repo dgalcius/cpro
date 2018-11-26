@@ -1,6 +1,8 @@
 #+TITLE: pun program
 #+AUTHOR: KING
 
+#+PROPERTY: tangle ./pun2.c
+
 Literate programming:
 [[http://www.howardism.org/Technical/Emacs/literate-programming-tutorial.html]]
 
@@ -12,14 +14,26 @@ Type C-c ’ (apostrophe) to edit the block in the language’s mode
   (directory-files ".")
 #+END_SRC
 
+#+BEGIN_SRC ruby
+  Dir.entries('.')
+#+END_SRC
+pun2.c
+
 * Compiler version
 #+BEGIN_SRC sh :results verbatim
   gcc --version
 #+END_SRC
 
+#+RESULTS:
+: gcc (Ubuntu 4.8.4-2ubuntu1~14.04.4) 4.8.4
+: Copyright (C) 2013 Free Software Foundation, Inc.
+: This is free software; see the source for copying conditions.  There is NO
+: warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+: 
+
 First we declare directive.
 Include header file
-#+BEGIN_SRC C 
+#+BEGIN_SRC C :results verbatim :tangle pun2.c
 #include <stdio.h>
 #+END_SRC
 
@@ -30,7 +44,7 @@ which is located under
 #+END_SRC
 
 main function call
-#+BEGIN_SRC C :results verbatim :tangle pun2.c :includes <stdio.h>
+#+BEGIN_SRC C :results verbatim :tangle pun2.c
   int main(void)
   {
     printf("To C, or not to C: that is the question!\n");
